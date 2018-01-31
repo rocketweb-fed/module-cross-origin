@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Rocket Web
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category  RocketWeb
+ * @package   RocketWeb_CrossOrigin
+ * @copyright Copyright (c) 2016-2017 RocketWeb (http://rocketweb.com)
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author    Rocket Web Inc.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="rocketweb" translate="label" sortOrder="10">
+            <label>Rocket Web</label>
+        </tab>
+        <section id="rocketweb_cross_origin" translate="label" type="text" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Cross Origin</label>
+            <tab>rocketweb</tab>
+            <resource>RocketWeb_CrossOrigin::config_cross_origin</resource>
+            <group id="url" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>URL</label>
+                <field id="map" translate="label comment" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Exclude 3rd Party URIs Map</label>
+                    <comment><![CDATA[URIs to be excluded by page-cache.js when it maps DOM nodes.<br/>Enter multiple URIs separated by new line.<br/>Regular expressions must begin with "regex::"<br/>e.g. https://www.google.com<br/>regex::http(s)?://[^\.]+.facebook.com(.*)]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
